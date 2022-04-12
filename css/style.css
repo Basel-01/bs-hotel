@@ -2,7 +2,7 @@
 :root {
   --main-color: #f7c08a;
   --bg-color: #333;
-  --hover-transition: all 0.4s ease;
+  --hover-transition: all 0.3s;
 }
 /* End Variables */
 /* Start Reset */
@@ -90,6 +90,9 @@ header nav ul a.current {
   justify-content: center;
   align-items: center;
 }
+.showcase .container {
+  max-width: 600px;
+}
 .showcase .container h1 {
   font-size: 50px;
 }
@@ -125,8 +128,11 @@ header nav ul a.current {
   padding-bottom: 30px;
 }
 .home-info .info-content a {
-  color: var(--bg-color);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
   background-color: #fff;
+  color: var(--bg-color);
   padding: 10px 20px;
   transition: var(--hover-transition);
 }
@@ -142,7 +148,7 @@ header nav ul a.current {
 .features div {
   color: var(--bg-color);
   text-align: center;
-  padding: 50px;
+  padding: 50px 15px;
 }
 .features div:nth-child(2) {
   background-color: var(--main-color);
@@ -162,9 +168,10 @@ header nav ul a.current {
   color: var(--bg-color);
   display: grid;
   grid-template-columns: 65% 35%;
+  align-items: center;
 }
 .about-info .container .text {
-  padding: 0 40px;
+  padding-right: 40px;
 }
 .about-info .container .text h1 {
   font-size: 40px;
@@ -197,6 +204,9 @@ header nav ul a.current {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.testimonials .container .guest-tow {
+  margin: 0;
 }
 .testimonials .container div img {
   width: 13%;
@@ -302,7 +312,7 @@ header nav ul a.current {
     border-bottom: 1px dotted #444;
   }
   .features {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
   }
   .showcase {
     height: calc(100vh - 181px);
@@ -320,13 +330,14 @@ header nav ul a.current {
     display: none;
   }
   .home-info .info-content {
-    padding: 70px 20px;
+    padding: 70px 15px;
   }
   .about-info .container {
-    grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
   .about-info .container .text {
+    padding: 0;
     text-align: center;
   }
   .about-info .container .text h1 {
